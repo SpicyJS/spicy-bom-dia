@@ -4,10 +4,16 @@ const port = 4444;
 const host = "localhost";
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader("contentType", "text/plain");
-  res.end("hello Caro");
+  res.setHeader("contentType", "application/json");
+  const data = {
+    status: "OK",
+    message:"Yeah!"
+  
+  }
+  
+  res.end(JSON.stringify(data));
 });
 
 server.listen(port, host, () => {
-  console.log("server is runing ");
+  console.log("server is running ");
 });
