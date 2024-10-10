@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc *.ts",
-    "build:watch": "tsc -w --outDir dist",
+    "build": "tsc",
+    "build:watch": "tsc -w",
     "start": "http-server ."
   },
   "keywords": [],
