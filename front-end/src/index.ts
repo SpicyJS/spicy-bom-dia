@@ -4,15 +4,17 @@ const form = document.getElementById("form");
 const userMsg = document.getElementById("user-messsage")!;
 
 const postData = async (name: string) => {
-  return await fetch("http://localhost:4444", { method: "post", body: name })
-    .then((res) => {
-      if (!res.ok) throw new Error("Not OK!");
-      return res.json();
-    })
-    .catch(
-      (error) => null
-      // console.error("There has been error while fetching:", error)
-    );
+  const fetchData = await fetch("http://localhost:4444", {
+    method: "post",
+    body: name,
+  });
+  const data = await fetchData.json();
+  return data;
+
+  // .catch(
+  //   (error) => null
+  //   // console.error("There has been error while fetching:", error)
+  // );
 };
 
 if (form) {

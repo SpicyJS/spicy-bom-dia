@@ -9,8 +9,7 @@ const server = http.createServer(async (req, res) => {
   res.statusCode = 200;
   res.setHeader("contentType", "application/json");
   const data = await getBody(req);
-
-  res.end(`Bom dia ${data}`);
+  res.end(JSON.stringify(`Bom dia ${data}`));
 });
 
 server.listen(port, host, () => {
