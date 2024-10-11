@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TypeScript Server</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
   </head>
   <script src="./dist/index.js"></script>
   <body>
     <h1>Hello from TypeScript Server!</h1>
-    <form>
+    <form id="form">
       <label for="fullname">Input full name to add user</label>
-      <input type="text" id="fullname" />
+      <input type="text" id="fullname" required />
       <input type="submit" value="submit and fetch" />
     </form>
-    <div>#User</div>
+    <div id="user-messsage">#User</div>
   </body>
 </html>

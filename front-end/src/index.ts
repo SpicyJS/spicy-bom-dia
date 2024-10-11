@@ -7,4 +7,18 @@ fetch("http://localhost:4444")
     return res.json();
   })
   .then((data) => console.log(data))
-  .catch((error) => console.error("There has been error while fetching:", error));
+  .catch((error) =>
+    console.error("There has been error while fetching:", error)
+  );
+
+const form = document.getElementById("form");
+const userMsg = document.getElementById("user-messsage");
+
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const fullName = document.getElementById("fullname");
+    userMsg?.textContent == `Bom-dia ${fullName}`;
+    // form.reset();
+  });
+}
