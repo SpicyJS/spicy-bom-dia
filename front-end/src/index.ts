@@ -16,13 +16,16 @@ if (form) {
     // form.reset();
   });
 }
-// fetch("http://localhost:4444")
-//   .then((res) => {
-//     if (!res.ok) throw new Error("Not OK!");
 
-//     return res.json();
-//   })
-//   .then((data) => console.log(data))
-//   .catch((error) =>
-//     console.error("There has been error while fetching:", error)
-//   );
+const postData = (name: string) => {
+  fetch("http://localhost:4444")
+    .then((res) => {
+      if (!res.ok) throw new Error("Not OK!");
+
+      return res.json();
+    })
+    .then((data) => console.log(data))
+    .catch((error) =>
+      console.error("There has been error while fetching:", error)
+    );
+};
