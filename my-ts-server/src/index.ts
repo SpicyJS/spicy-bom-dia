@@ -12,6 +12,14 @@ const server = http.createServer((req, res) => {
     message: "Yeah!",
   };
 
+  let incomingData = "";
+  req.on("data", (chunk) => {
+    incomingData += chunk;
+  });
+  req.on("end", () => {
+    console.log(JSON.parse(incomingData))
+  });
+
   res.end(JSON.stringify(data));
 });
 
